@@ -1,0 +1,14 @@
+Continuous Actions:
+rotate		[0] {
+-1 = 
+}
+
+Discrete Actions:
+
+shot 		[0] = 1
+
+moveForward	[1] = 1
+moveBackward	[1] = 2
+
+moveLeft 	[2] = 1
+moveRight 	[2] = 2

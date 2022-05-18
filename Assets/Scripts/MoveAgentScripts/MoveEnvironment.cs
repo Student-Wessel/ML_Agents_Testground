@@ -1,14 +1,14 @@
-using System;
 using AgentUtils;
 using CustomAgent;
-using CustomPropertyDrawers;
 using UnityEngine;
 
-namespace ShootAgentScripts
+namespace MoveAgentScripts
 {
-    public class ShootEnvironment : LearningEnvironment
+    public class MoveEnvironment : LearningEnvironment
     {
         [SerializeField] private Spawner agentSpawner,goalSpawner;
+        [SerializeField] private Material mGreen, mRed;
+        [SerializeField] private MeshRenderer groundRenderer;
         private void Start()
         {
             agentSpawner.SpawnToRandomPositionAndRotation();
@@ -23,7 +23,14 @@ namespace ShootAgentScripts
 
         public override void ShowEpisodeResult(EpisodeEndResult result)
         {
-            
+            if (result.reward > 0)
+            {
+                groundRenderer.material = mGreen;
+            }
+            else
+            {
+                groundRenderer.material = mRed;
+            }
         }
     }
 }

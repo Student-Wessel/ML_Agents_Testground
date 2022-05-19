@@ -45,22 +45,26 @@ namespace MoveAgentScripts
 
             actionsOut.ContinuousActions.Array[0] = rotationValue;
 
+            actionsOut.DiscreteActions.Array[0] = 1;
+            actionsOut.DiscreteActions.Array[1] = 1;
+
+
             if (Input.GetKey(KeyCode.W))
             {
-                actionsOut.DiscreteActions.Array[0] = 1;
+                actionsOut.DiscreteActions.Array[0] = 2;
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                actionsOut.DiscreteActions.Array[0] = -1;
+                actionsOut.DiscreteActions.Array[0] = 0;
             }
             
             if (Input.GetKey(KeyCode.A))
             {
-                actionsOut.DiscreteActions.Array[1] = 1;
+                actionsOut.DiscreteActions.Array[1] = 2;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                actionsOut.DiscreteActions.Array[1] = -1;
+                actionsOut.DiscreteActions.Array[1] = 0;
             }
         }
         

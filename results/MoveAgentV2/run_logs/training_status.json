@@ -2,22 +2,58 @@
     "MoveAgent": {
         "checkpoints": [
             {
-                "steps": 9960,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-9960.onnx",
-                "reward": null,
-                "creation_time": 1652893411.5441859,
+                "steps": 2999997,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-2999997.onnx",
+                "reward": 1.2002777689033084,
+                "creation_time": 1652950247.0848093,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-9960.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-2999997.pt"
+                ]
+            },
+            {
+                "steps": 3499980,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3499980.onnx",
+                "reward": 1.4077142689909254,
+                "creation_time": 1652950626.5039935,
+                "auxillary_file_paths": [
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3499980.pt"
+                ]
+            },
+            {
+                "steps": 3999990,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3999990.onnx",
+                "reward": 1.4147618725186302,
+                "creation_time": 1652951031.0112076,
+                "auxillary_file_paths": [
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3999990.pt"
+                ]
+            },
+            {
+                "steps": 4499936,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4499936.onnx",
+                "reward": 1.2499999645210447,
+                "creation_time": 1652951438.524406,
+                "auxillary_file_paths": [
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4499936.pt"
+                ]
+            },
+            {
+                "steps": 4973180,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.onnx",
+                "reward": 1.3518571087292262,
+                "creation_time": 1652951894.1069877,
+                "auxillary_file_paths": [
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 9960,
+            "steps": 4973180,
             "file_path": "results\\MoveAgentV2\\MoveAgent.onnx",
-            "reward": null,
-            "creation_time": 1652893411.5441859,
+            "reward": 1.3518571087292262,
+            "creation_time": 1652951894.1069877,
             "auxillary_file_paths": [
-                "results\\MoveAgentV2\\MoveAgent\\MoveAgent-9960.pt"
+                "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.pt"
             ]
         }
     },

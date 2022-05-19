@@ -1121,7 +1121,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 500
+  MaxStep: 675
   moveSpeed: 5
   strafeMultiplier: 0.75
   backwardMultiplier: 0.5

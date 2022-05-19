@@ -2,58 +2,58 @@
     "MoveAgent": {
         "checkpoints": [
             {
-                "steps": 2999997,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-2999997.onnx",
-                "reward": 1.2002777689033084,
-                "creation_time": 1652950247.0848093,
+                "steps": 6499975,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-6499975.onnx",
+                "reward": -0.8394815259509616,
+                "creation_time": 1652953162.7355976,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-2999997.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-6499975.pt"
                 ]
             },
             {
-                "steps": 3499980,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3499980.onnx",
-                "reward": 1.4077142689909254,
-                "creation_time": 1652950626.5039935,
+                "steps": 6999960,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-6999960.onnx",
+                "reward": 0.6048147883266211,
+                "creation_time": 1652953551.9531329,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3499980.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-6999960.pt"
                 ]
             },
             {
-                "steps": 3999990,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3999990.onnx",
-                "reward": 1.4147618725186302,
-                "creation_time": 1652951031.0112076,
+                "steps": 7499941,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-7499941.onnx",
+                "reward": 0.2342386411295997,
+                "creation_time": 1652953932.532895,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-3999990.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-7499941.pt"
                 ]
             },
             {
-                "steps": 4499936,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4499936.onnx",
-                "reward": 1.2499999645210447,
-                "creation_time": 1652951438.524406,
+                "steps": 7999994,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-7999994.onnx",
+                "reward": 1.3748147785663605,
+                "creation_time": 1652954323.245082,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4499936.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-7999994.pt"
                 ]
             },
             {
-                "steps": 4973180,
-                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.onnx",
-                "reward": 1.3518571087292262,
-                "creation_time": 1652951894.1069877,
+                "steps": 8255361,
+                "file_path": "results\\MoveAgentV2\\MoveAgent\\MoveAgent-8255361.onnx",
+                "reward": 0.9093121362051794,
+                "creation_time": 1652954578.8638382,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.pt"
+                    "results\\MoveAgentV2\\MoveAgent\\MoveAgent-8255361.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 4973180,
+            "steps": 8255361,
             "file_path": "results\\MoveAgentV2\\MoveAgent.onnx",
-            "reward": 1.3518571087292262,
-            "creation_time": 1652951894.1069877,
+            "reward": 0.9093121362051794,
+            "creation_time": 1652954578.8638382,
             "auxillary_file_paths": [
-                "results\\MoveAgentV2\\MoveAgent\\MoveAgent-4973180.pt"
+                "results\\MoveAgentV2\\MoveAgent\\MoveAgent-8255361.pt"
             ]
         }
     },

@@ -1,5 +1,7 @@
 mlagents-learn config/ShootAgent.yaml --run-id=ShootAgent
 mlagents-learn config/MoveAgent.yaml --run-id=MoveAgent
 mlagents-learn config/MoveAgent.yaml --run-id=MoveAgentV2
+mlagents-learn config/MoveAgent.yaml --run-id=MoveAgentV3
+mlagents-learn config/MoveAgent.yaml --run-id=MoveAgentV4
 
 tensorboard --logdir results

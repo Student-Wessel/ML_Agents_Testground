@@ -1578,11 +1578,9 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1500
-  moveSpeed: 5
-  strafeMultiplier: 0.75
-  backwardMultiplier: 0.5
-  rotationSpeed: 360
+  MaxStep: 750
+  moveSpeed: 8
+  rotationSpeed: 180
   goal: {fileID: 1906667282491503932}
 --- !u!114 &7298013368108888150
 MonoBehaviour:

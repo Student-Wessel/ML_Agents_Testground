@@ -85,6 +85,8 @@ namespace MoveAgentScripts
             // forward Value [0] | 0 or 1 or 2
             // side Value [1] | 0 or 1 or 2
 
+            var oldPosition = transform.position;
+            
             // Map values from 0,1,2 to -1,0,1
             int forwardValue = actions.DiscreteActions[0]-1;
             int sideValue = actions.DiscreteActions[1]-1;
@@ -98,8 +100,19 @@ namespace MoveAgentScripts
             Vector3 moveVector = desiredDir * forwardScale * moveSpeed * Time.fixedDeltaTime;
             ch.Move(moveVector);
 
+            var newPosition = transform.position;
+            var goalPosition = goal.transform.position;
+
+            Vector3 bestPossibleStep = ((goalPosition - oldPosition).normalized) * moveSpeed * Time.deltaTime;
+            Vector3 bestPossiblePos = oldPosition + bestPossibleStep;
+
+            float distanceBetweenBest = (bestPossiblePos - newPosition).magnitude;
+
+            float bestStepRatioScaled = MathExtension.Map(-distanceBetweenBest,-((moveSpeed * Time.fixedDeltaTime)*2), 0, -1, 1);
+
             if (MaxStep > 0)
             {
+                AddReward((bestStepRatioScaled/MaxStep));
                 AddReward(-(1f / MaxStep));
             }
         }
@@ -138,7 +151,10 @@ namespace MoveAgentScripts
         {
             if (other.gameObject == goal)
             {
-                AddReward(2f);
+                
+                //AddReward(2f);
+                int stepsLeft = MaxStep - StepCount;
+                AddReward((1/MaxStep)*stepsLeft);
                 lastResults.reward = 1f;
                 EndEpisode();
             }

@@ -2,31 +2,58 @@
     "BallUphold": {
         "checkpoints": [
             {
-                "steps": 499994,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-499994.onnx",
-                "reward": 0.015342856757342815,
-                "creation_time": 1653305117.1651914,
+                "steps": 506166,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-506166.onnx",
+                "reward": 0.950000007947286,
+                "creation_time": 1653316933.0485046,
                 "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-499994.pt"
+                    "results\\BallUphold\\BallUphold\\BallUphold-506166.pt"
                 ]
             },
             {
-                "steps": 806888,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-806888.onnx",
-                "reward": 0.011599999657550524,
-                "creation_time": 1653305744.5695052,
+                "steps": 999945,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-999945.onnx",
+                "reward": 0.8722222360471884,
+                "creation_time": 1653317878.5725806,
                 "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-806888.pt"
+                    "results\\BallUphold\\BallUphold\\BallUphold-999945.pt"
+                ]
+            },
+            {
+                "steps": 1499940,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-1499940.onnx",
+                "reward": 0.6750000100582838,
+                "creation_time": 1653318243.4466114,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-1499940.pt"
+                ]
+            },
+            {
+                "steps": 1999965,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-1999965.onnx",
+                "reward": 1.0500000156462193,
+                "creation_time": 1653318596.8084736,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-1999965.pt"
+                ]
+            },
+            {
+                "steps": 2004137,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-2004137.onnx",
+                "reward": null,
+                "creation_time": 1653318661.346314,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-2004137.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 806888,
+            "steps": 2004137,
             "file_path": "results\\BallUphold\\BallUphold.onnx",
-            "reward": 0.011599999657550524,
-            "creation_time": 1653305744.5695052,
+            "reward": null,
+            "creation_time": 1653318661.346314,
             "auxillary_file_paths": [
-                "results\\BallUphold\\BallUphold\\BallUphold-806888.pt"
+                "results\\BallUphold\\BallUphold\\BallUphold-2004137.pt"
             ]
         }
     },

@@ -17,7 +17,7 @@ namespace BallUphold
         
         public override void ShowEpisodeResult(EpisodeEndResult result)
         {
-            stepCountText.text = Mathf.RoundToInt(MathExtension.Map(result.stepCount, 0, result.maxStep, 0, 100)).ToString();
+            stepCountText.text = result.stepCount.ToString();
         }
     }
 }

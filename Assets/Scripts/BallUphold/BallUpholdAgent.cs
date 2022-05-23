@@ -11,8 +11,9 @@ namespace BallUphold
     [RequireComponent(typeof(Rigidbody))]
     public class BallUpholdAgent : EnvironmentAgent
     {
-        [SerializeField] private float moveSpeed = 2f, rotationSpeed = 360;
+        [SerializeField] private float moveSpeed = 2000f;
         [SerializeField] private UpholdBall ball;
+        [SerializeField] private int headbuttGoal = 10; // The amount of time the agent should headbutt the ball
         
         private Rigidbody rb;
 
@@ -22,6 +23,9 @@ namespace BallUphold
         private bool isGrounded = false;
 
         private Vector3 startingPosition;
+
+        private int headbuttCount = 0;
+        private int highestHeadbuttCount = 0;
 
         private void Awake()
         {
@@ -34,17 +38,18 @@ namespace BallUphold
             transform.position = startingPosition;
             rb.velocity = Vector3.zero;
             environment.ResetEnvironment();
-            environment.ShowEpisodeResult(latestResults);
+            headbuttCount = 0;
+            ball.ResetBall();
         }
 
         public override void CollectObservations(VectorSensor sensor)
         {
-            sensor.AddObservation(transform.position); // 3
+            sensor.AddObservation(transform.localPosition); // 3
             Vector3 ownVelocity = rb.velocity;
             sensor.AddObservation(ownVelocity.x); // 1
             sensor.AddObservation(ownVelocity.y); // 1
             sensor.AddObservation(transform.eulerAngles.y); // 1
-            sensor.AddObservation(ball.transform); // 3
+            sensor.AddObservation(ball.transform.localPosition); // 3
             sensor.AddObservation(ball.velocity); // 3
         }
         
@@ -89,24 +94,11 @@ namespace BallUphold
         public override void OnActionReceived(ActionBuffers actions)
         {
             float forwardValue = actions.ContinuousActions[0];
-            float rotationValue = actions.ContinuousActions[1];
+            float sideValue = actions.ContinuousActions[1];
 
-            Vector3 moveVector = transform.forward * forwardValue * moveSpeed;
+            Vector3 moveVector = Vector3.ClampMagnitude(new Vector3(sideValue, 0, forwardValue),1f) * moveSpeed * Time.fixedDeltaTime;
             rb.AddForce(moveVector,ForceMode.Acceleration);
-            transform.Rotate(Vector3.up,rotationValue * rotationSpeed * Time.fixedDeltaTime);
             
-            if (MaxStep > 0)
-            {
-                AddReward(1f / MaxStep);
-                latestResults.reward = GetCumulativeReward();
-                latestResults.stepCount = StepCount;
-                latestResults.maxStep = MaxStep;
-                
-                if (StepCount % 100 == 0)
-                {
-                    environment.ShowEpisodeResult(latestResults);
-                }
-            }
         }
         
         // This for some reason the rb.freeze rotations doesn't work
@@ -118,6 +110,24 @@ namespace BallUphold
         public void OnBallGroundTouch()
         {
             EndEpisode();
+        }
+
+        public void OnHeadButt()
+        {
+            headbuttCount++;
+            latestResults.reward = GetCumulativeReward();
+            latestResults.stepCount = headbuttCount;
+            latestResults.maxStep = MaxStep;
+
+            if (headbuttCount > highestHeadbuttCount)
+            {
+                environment.ShowEpisodeResult(latestResults);
+                highestHeadbuttCount = headbuttCount;
+            }
+            
+            AddReward(1f/headbuttGoal);
+            if (headbuttCount > headbuttGoal)
+                EndEpisode();
         }
     }
 }

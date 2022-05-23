@@ -20,7 +20,7 @@ namespace CustomAgent
                }
           }
 
-          public abstract void ResetEnvironment();
+          public virtual void ResetEnvironment() { }
 
           public virtual void ShowEpisodeResult(EpisodeEndResult result) { }
      }

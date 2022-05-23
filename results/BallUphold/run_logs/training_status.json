@@ -1,0 +1,38 @@
+{
+    "BallUphold": {
+        "checkpoints": [
+            {
+                "steps": 499994,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-499994.onnx",
+                "reward": 0.015342856757342815,
+                "creation_time": 1653305117.1651914,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-499994.pt"
+                ]
+            },
+            {
+                "steps": 806888,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-806888.onnx",
+                "reward": 0.011599999657550524,
+                "creation_time": 1653305744.5695052,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-806888.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 806888,
+            "file_path": "results\\BallUphold\\BallUphold.onnx",
+            "reward": 0.011599999657550524,
+            "creation_time": 1653305744.5695052,
+            "auxillary_file_paths": [
+                "results\\BallUphold\\BallUphold\\BallUphold-806888.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

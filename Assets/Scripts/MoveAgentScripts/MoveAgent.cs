@@ -84,8 +84,7 @@ namespace MoveAgentScripts
             // DiscreteActions
             // forward Value [0] | 0 or 1 or 2
             // side Value [1] | 0 or 1 or 2
-
-            var oldPosition = transform.position;
+            
             
             // Map values from 0,1,2 to -1,0,1
             int forwardValue = actions.DiscreteActions[0]-1;
@@ -100,19 +99,8 @@ namespace MoveAgentScripts
             Vector3 moveVector = desiredDir * forwardScale * moveSpeed * Time.fixedDeltaTime;
             ch.Move(moveVector);
 
-            var newPosition = transform.position;
-            var goalPosition = goal.transform.position;
-
-            Vector3 bestPossibleStep = ((goalPosition - oldPosition).normalized) * moveSpeed * Time.deltaTime;
-            Vector3 bestPossiblePos = oldPosition + bestPossibleStep;
-
-            float distanceBetweenBest = (bestPossiblePos - newPosition).magnitude;
-
-            float bestStepRatioScaled = MathExtension.Map(-distanceBetweenBest,-((moveSpeed * Time.fixedDeltaTime)*2), 0, -1, 1);
-
             if (MaxStep > 0)
             {
-                AddReward((bestStepRatioScaled/MaxStep));
                 AddReward(-(1f / MaxStep));
             }
         }
@@ -124,11 +112,11 @@ namespace MoveAgentScripts
             // goalPos = 3
             // angle = 1
 
-            var ownPos = transform.position;
-            var goalPos = goal.transform.position;
+            var ownPos = transform.localPosition;
+            var goalPos = goal.transform.localPosition;
 
             sensor.AddObservation(ownPos);
-            sensor.AddObservation(transform.eulerAngles.y);
+            sensor.AddObservation(transform.localRotation.eulerAngles.y);
             sensor.AddObservation(goalPos);
             
             Vector3 delta = goalPos - ownPos;
@@ -151,10 +139,7 @@ namespace MoveAgentScripts
         {
             if (other.gameObject == goal)
             {
-                
-                //AddReward(2f);
-                int stepsLeft = MaxStep - StepCount;
-                AddReward((1/MaxStep)*stepsLeft);
+                AddReward(2f);
                 lastResults.reward = 1f;
                 EndEpisode();
             }

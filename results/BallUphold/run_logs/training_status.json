@@ -2,42 +2,6 @@
     "BallUphold": {
         "checkpoints": [
             {
-                "steps": 506166,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-506166.onnx",
-                "reward": 0.950000007947286,
-                "creation_time": 1653316933.0485046,
-                "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-506166.pt"
-                ]
-            },
-            {
-                "steps": 999945,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-999945.onnx",
-                "reward": 0.8722222360471884,
-                "creation_time": 1653317878.5725806,
-                "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-999945.pt"
-                ]
-            },
-            {
-                "steps": 1499940,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-1499940.onnx",
-                "reward": 0.6750000100582838,
-                "creation_time": 1653318243.4466114,
-                "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-1499940.pt"
-                ]
-            },
-            {
-                "steps": 1999965,
-                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-1999965.onnx",
-                "reward": 1.0500000156462193,
-                "creation_time": 1653318596.8084736,
-                "auxillary_file_paths": [
-                    "results\\BallUphold\\BallUphold\\BallUphold-1999965.pt"
-                ]
-            },
-            {
                 "steps": 2004137,
                 "file_path": "results\\BallUphold\\BallUphold\\BallUphold-2004137.onnx",
                 "reward": null,
@@ -45,15 +9,51 @@
                 "auxillary_file_paths": [
                     "results\\BallUphold\\BallUphold\\BallUphold-2004137.pt"
                 ]
+            },
+            {
+                "steps": 2499989,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-2499989.onnx",
+                "reward": null,
+                "creation_time": 1653319456.2696805,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-2499989.pt"
+                ]
+            },
+            {
+                "steps": 2999978,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-2999978.onnx",
+                "reward": 0.5750000085681677,
+                "creation_time": 1653319827.1957142,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-2999978.pt"
+                ]
+            },
+            {
+                "steps": 3499981,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-3499981.onnx",
+                "reward": 0.7071428676801068,
+                "creation_time": 1653320180.9031377,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-3499981.pt"
+                ]
+            },
+            {
+                "steps": 3804883,
+                "file_path": "results\\BallUphold\\BallUphold\\BallUphold-3804883.onnx",
+                "reward": 0.6250000093132257,
+                "creation_time": 1653320391.0760133,
+                "auxillary_file_paths": [
+                    "results\\BallUphold\\BallUphold\\BallUphold-3804883.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2004137,
+            "steps": 3804883,
             "file_path": "results\\BallUphold\\BallUphold.onnx",
-            "reward": null,
-            "creation_time": 1653318661.346314,
+            "reward": 0.6250000093132257,
+            "creation_time": 1653320391.0760133,
             "auxillary_file_paths": [
-                "results\\BallUphold\\BallUphold\\BallUphold-2004137.pt"
+                "results\\BallUphold\\BallUphold\\BallUphold-3804883.pt"
             ]
         }
     },

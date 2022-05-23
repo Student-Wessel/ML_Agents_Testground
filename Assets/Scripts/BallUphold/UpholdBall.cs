@@ -78,7 +78,7 @@ namespace BallUphold
             var delta2D = Random.insideUnitCircle;
             Vector3 delta = new Vector3(delta2D.x,0,delta2D.y);
 
-            delta *= 2;
+            delta *= 6;
             float upForce = Random.Range(minHeadbuttForce, maxHeadbuttForce);
             delta.y = upForce;
             rb.velocity = delta;

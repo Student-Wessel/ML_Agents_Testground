@@ -1121,7 +1121,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 1000
+  MaxStep: 375
   moveSpeed: 8
   rotationSpeed: 180
   goal: {fileID: 4268766187120969008}

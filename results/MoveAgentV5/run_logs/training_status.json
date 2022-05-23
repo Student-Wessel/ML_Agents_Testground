@@ -2,58 +2,58 @@
     "MoveAgent": {
         "checkpoints": [
             {
-                "steps": 499989,
-                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-499989.onnx",
-                "reward": -1.1742432812849681,
-                "creation_time": 1653057277.0398812,
+                "steps": 6030233,
+                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6030233.onnx",
+                "reward": 1.5149999931454659,
+                "creation_time": 1653325505.9227169,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-499989.pt"
+                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6030233.pt"
                 ]
             },
             {
-                "steps": 999966,
-                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-999966.onnx",
-                "reward": -1.29219251871109,
-                "creation_time": 1653057715.4486496,
+                "steps": 6499999,
+                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6499999.onnx",
+                "reward": 1.1684444571534793,
+                "creation_time": 1653325922.1942623,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-999966.pt"
+                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6499999.pt"
                 ]
             },
             {
-                "steps": 1499951,
-                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-1499951.onnx",
-                "reward": -1.2273425683379173,
-                "creation_time": 1653058139.6937366,
+                "steps": 6999988,
+                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6999988.onnx",
+                "reward": 1.2464197625716527,
+                "creation_time": 1653326331.2865515,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-1499951.pt"
+                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-6999988.pt"
                 ]
             },
             {
-                "steps": 1999969,
-                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-1999969.onnx",
-                "reward": null,
-                "creation_time": 1653058559.5831168,
+                "steps": 7499980,
+                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-7499980.onnx",
+                "reward": 1.3977634579904619,
+                "creation_time": 1653326748.8273458,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-1999969.pt"
+                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-7499980.pt"
                 ]
             },
             {
-                "steps": 2196798,
-                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-2196798.onnx",
-                "reward": null,
-                "creation_time": 1653058733.4782841,
+                "steps": 7539776,
+                "file_path": "results\\MoveAgentV5\\MoveAgent\\MoveAgent-7539776.onnx",
+                "reward": 1.3132698546562875,
+                "creation_time": 1653326783.0457587,
                 "auxillary_file_paths": [
-                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-2196798.pt"
+                    "results\\MoveAgentV5\\MoveAgent\\MoveAgent-7539776.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 2196798,
+            "steps": 7539776,
             "file_path": "results\\MoveAgentV5\\MoveAgent.onnx",
-            "reward": null,
-            "creation_time": 1653058733.4782841,
+            "reward": 1.3132698546562875,
+            "creation_time": 1653326783.0457587,
             "auxillary_file_paths": [
-                "results\\MoveAgentV5\\MoveAgent\\MoveAgent-2196798.pt"
+                "results\\MoveAgentV5\\MoveAgent\\MoveAgent-7539776.pt"
             ]
         }
     },

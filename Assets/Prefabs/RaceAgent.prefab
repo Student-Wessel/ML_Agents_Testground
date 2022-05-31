@@ -507,7 +507,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 0
+  MaxStep: 10000
   isInPunishZone: 0
   ContinuousActionsScale: 1
 --- !u!114 &570256650198452643
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkPointTag: CheckPoint
   hasTimeLimit: 1
-  maxTimeBetweenCheckpoints: 0.75
+  maxTimeBetweenCheckpoints: 5
   checkPoints: {fileID: 0}
 --- !u!114 &8106609742092254606
 MonoBehaviour:

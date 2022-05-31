@@ -65,10 +65,10 @@ namespace RaceAgentScripts
             finishCount++;
             AddReward(1f / checkPointActor.checkPointCount);
 
-            if (finishCount > 1)
-            {
-                EndEpisode();
-            }
+            // if (finishCount > 1)
+            // {
+            //     EndEpisode();
+            // }
         }
 
         private void Start()

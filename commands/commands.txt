@@ -9,5 +9,7 @@ mlagents-learn config/BallUphold.yaml --run-id=BallUphold
 
 mlagents-learn config/RaceAgent.yaml --run-id=RaceAgent
 
+mlagents-learn config/RayAgent.yaml --run-id=RayAgent
+
 
 tensorboard --logdir results

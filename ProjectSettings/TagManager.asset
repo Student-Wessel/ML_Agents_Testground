@@ -11,6 +11,7 @@ TagManager:
   - Ground
   - ground
   - PunishZone
+  - CheckPoint
   layers:
   - Default
   - TransparentFX

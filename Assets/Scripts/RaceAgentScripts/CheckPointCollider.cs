@@ -3,16 +3,16 @@ using UnityEngine;
 
 namespace RaceAgentScripts
 {
-    public class CheckPointCollider : MonoBehaviour, ICheckPointAgent
+    public class CheckPointCollider : MonoBehaviour, ICheckPointActor
     {
         [SerializeField] private GameObject checkPointAgent;
         
-        private ICheckPointAgent agent;
+        private ICheckPointActor actor;
         private void Awake()
         {
-            agent = checkPointAgent.GetComponent<ICheckPointAgent>();
+            actor = checkPointAgent.GetComponent<ICheckPointActor>();
 
-            if (agent == null)
+            if (actor == null)
             {
                 Debug.LogWarning("Check point agent component not found");
             }
@@ -20,7 +20,7 @@ namespace RaceAgentScripts
 
         public void CheckPointReached(CheckPoint pCheckPoint)
         {
-            agent.CheckPointReached(pCheckPoint);
+            actor.CheckPointReached(pCheckPoint);
         }
     }
 }

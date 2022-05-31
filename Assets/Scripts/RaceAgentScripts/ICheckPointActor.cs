@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace RaceAgentScripts
 {
-    public interface ICheckPointAgent
+    public interface ICheckPointActor
     {
         public void CheckPointReached(CheckPoint pCheckPoint);
     }

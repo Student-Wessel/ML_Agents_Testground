@@ -3,20 +3,17 @@ using UnityEngine;
 
 namespace RaceAgentScripts
 {
-    [RequireComponent(typeof(Collider),typeof(Rigidbody))]
+    [RequireComponent(typeof(Collider))]
     public class CheckPoint : MonoBehaviour
     {
         private void Awake()
         {
             GetComponent<Collider>().isTrigger = true;
-            var rb = GetComponent<Rigidbody>();
-            rb.useGravity = false;
-            rb.isKinematic = false;
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            var checkpointAgent = other.GetComponent<ICheckPointAgent>();
+            var checkpointAgent = other.GetComponent<ICheckPointActor>();
             if (checkpointAgent != null)
                 checkpointAgent.CheckPointReached(this);
         }

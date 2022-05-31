@@ -7,17 +7,15 @@ using UnityEngine;
 
 namespace RaceAgentScripts
 {
-    [RequireComponent(typeof(AbstractCarController),typeof(Rigidbody))]
-    public class RaceAgent : EnvironmentAgent, ICheckPointAgent
+    [RequireComponent(typeof(AbstractCarController),typeof(Rigidbody),typeof(CheckPointActor))]
+    public class RaceActor : EnvironmentAgent
     {
-        [SerializeField] private CheckPointManager checkPointManager;
+        private CheckPointActor checkPointActor;
 
         // This rigidbody is only used for triggers, and is set to kinematic
         private Rigidbody rb;
         
         private AbstractCarController carController;
-        private List<CheckPoint> reachedCheckPoints;
-        private int latestCheckPointIndex = -1;
         
         private Vector3 startPosition;
         private Quaternion startRotation;
@@ -25,6 +23,8 @@ namespace RaceAgentScripts
         private readonly string punishZoneString = "PunishZone";
         private int inZoneTriggers = 0;
         public bool isInPunishZone = false;
+
+        private int finishCount = 0;
         
         // Debug
 
@@ -34,10 +34,41 @@ namespace RaceAgentScripts
         {
             rb = GetComponent<Rigidbody>();
             carController = GetComponent<AbstractCarController>();
-            reachedCheckPoints = new List<CheckPoint>();
+            checkPointActor = GetComponent<CheckPointActor>();
 
             rb.isKinematic = true;
             rb.useGravity = false;
+            
+            checkPointActor.checkPointReachedCorrect += OnCorrectCheckPoint;
+            checkPointActor.checkPointReachedWrong += OnWrongCheckPoint;
+            checkPointActor.checkPointFailed += OnCheckPointFailed;
+            checkPointActor.checkPointReachedFinish += OnFinishReached;
+        }
+        
+        private void OnCorrectCheckPoint(CheckPoint pCheckPoint)
+        {
+            AddReward(1f / checkPointActor.checkPointCount);
+        }
+        
+        private void OnWrongCheckPoint(CheckPoint pCheckPoint)
+        {
+            
+        }
+        
+        private void OnCheckPointFailed(CheckPoint pCheckPoint)
+        {
+            EndEpisode();
+        }
+
+        private void OnFinishReached(CheckPoint pCheckPoint)
+        {
+            finishCount++;
+            AddReward(1f / checkPointActor.checkPointCount);
+
+            if (finishCount > 1)
+            {
+                EndEpisode();
+            }
         }
 
         private void Start()
@@ -50,13 +81,14 @@ namespace RaceAgentScripts
         {
             carController.WarpCar(startPosition);
             carController.transform.rotation = startRotation;
-            reachedCheckPoints = new List<CheckPoint>();
-            latestCheckPointIndex = -1;
+            checkPointActor.ResetActor();
+            finishCount = 0;
         }
         
         public override void CollectObservations(VectorSensor sensor)
         {
-            sensor.AddObservation(carController.transform.rotation.eulerAngles.y); // 1
+            sensor.AddObservation(checkPointActor.CurrentTarget.transform.forward); // 3
+            sensor.AddObservation(transform.forward); // 3
             sensor.AddObservation(carController.GetVelocity()); // 3
         }
         
@@ -107,66 +139,35 @@ namespace RaceAgentScripts
             carInput.breaking = breakValue == 1;
             
             carController.SetCarInput(carInput);
-
-            if (isInPunishZone)
-            {
-                AddReward(-1f);
-                EndEpisode();
-            }
-        }
-        public void CheckPointReached(CheckPoint pCheckPoint)
-        {
-            // We did not get to this checkpoint yet
-            if (!reachedCheckPoints.Contains(pCheckPoint))
-            {
-                int reachedCheckPointIndex = checkPointManager.GetCheckPointIndex(pCheckPoint);
-                
-                // We got to the next checkpoint
-                if (reachedCheckPointIndex == (latestCheckPointIndex + 1))
-                {
-                    // We reach the finish line
-                    if (reachedCheckPointIndex == checkPointManager.HighestCheckpointIndex)
-                    {
-                        AddReward(1f / checkPointManager.HighestCheckpointIndex);
-                        reachedCheckPoints = new List<CheckPoint>();
-                        latestCheckPointIndex = -1;
-                    }
-                    else
-                    {
-                        AddReward(1f / checkPointManager.HighestCheckpointIndex);
-                        reachedCheckPoints.Add(pCheckPoint);
-                        latestCheckPointIndex = reachedCheckPointIndex;
-                    }
-                }
-                else // We got to an wrong check point
-                {
-                    AddReward(-1f);
-                    EndEpisode();
-                }
-            }
+            
+            // if (isInPunishZone)
+            // {
+            //     AddReward(-1f);
+            //     EndEpisode();
+            // }
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag(punishZoneString))
-            {
-                isInPunishZone = true;
-                inZoneTriggers++;
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            if (other.CompareTag(punishZoneString))
-            {
-                inZoneTriggers--;
-
-                if (inZoneTriggers <= 0)
-                {
-                    inZoneTriggers = 0;
-                    isInPunishZone = false;
-                }
-            }
-        }
+        // private void OnTriggerEnter(Collider other)
+        // {
+        //     if (other.CompareTag(punishZoneString))
+        //     {
+        //         isInPunishZone = true;
+        //         inZoneTriggers++;
+        //     }
+        // }
+        //
+        // private void OnTriggerExit(Collider other)
+        // {
+        //     if (other.CompareTag(punishZoneString))
+        //     {
+        //         inZoneTriggers--;
+        //
+        //         if (inZoneTriggers <= 0)
+        //         {
+        //             inZoneTriggers = 0;
+        //             isInPunishZone = false;
+        //         }
+        //     }
+        // }
     }
 }

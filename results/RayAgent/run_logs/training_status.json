@@ -1,0 +1,29 @@
+{
+    "RayAgent": {
+        "checkpoints": [
+            {
+                "steps": 196235,
+                "file_path": "results\\RayAgent\\RayAgent\\RayAgent-196235.onnx",
+                "reward": 0.8594186122334281,
+                "creation_time": 1654002353.93505,
+                "auxillary_file_paths": [
+                    "results\\RayAgent\\RayAgent\\RayAgent-196235.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 196235,
+            "file_path": "results\\RayAgent\\RayAgent.onnx",
+            "reward": 0.8594186122334281,
+            "creation_time": 1654002353.93505,
+            "auxillary_file_paths": [
+                "results\\RayAgent\\RayAgent\\RayAgent-196235.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

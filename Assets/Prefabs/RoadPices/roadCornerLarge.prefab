@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3431521216431250544
 Transform:
@@ -90,7 +90,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2654000003494282954}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2854f1f0786929f4db1a8c0442c38d29, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
@@ -114,7 +114,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7132910414519390096
 Transform:
@@ -187,7 +187,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7617522756383184170}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 2854f1f0786929f4db1a8c0442c38d29, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4

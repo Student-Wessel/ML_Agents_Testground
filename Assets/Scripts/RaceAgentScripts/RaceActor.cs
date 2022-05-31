@@ -140,34 +140,33 @@ namespace RaceAgentScripts
             
             carController.SetCarInput(carInput);
             
-            // if (isInPunishZone)
-            // {
-            //     AddReward(-1f);
-            //     EndEpisode();
-            // }
+            if (isInPunishZone)
+            {
+                AddReward(-0.01f);
+            }
         }
 
-        // private void OnTriggerEnter(Collider other)
-        // {
-        //     if (other.CompareTag(punishZoneString))
-        //     {
-        //         isInPunishZone = true;
-        //         inZoneTriggers++;
-        //     }
-        // }
-        //
-        // private void OnTriggerExit(Collider other)
-        // {
-        //     if (other.CompareTag(punishZoneString))
-        //     {
-        //         inZoneTriggers--;
-        //
-        //         if (inZoneTriggers <= 0)
-        //         {
-        //             inZoneTriggers = 0;
-        //             isInPunishZone = false;
-        //         }
-        //     }
-        // }
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag(punishZoneString))
+            {
+                isInPunishZone = true;
+                inZoneTriggers++;
+            }
+        }
+        
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag(punishZoneString))
+            {
+                inZoneTriggers--;
+        
+                if (inZoneTriggers <= 0)
+                {
+                    inZoneTriggers = 0;
+                    isInPunishZone = false;
+                }
+            }
+        }
     }
 }

@@ -7,4 +7,7 @@ mlagents-learn config/MoveAgent.yaml --run-id=MoveAgentV4
 
 mlagents-learn config/BallUphold.yaml --run-id=BallUphold
 
+mlagents-learn config/RaceAgent.yaml --run-id=RaceAgent
+
+
 tensorboard --logdir results

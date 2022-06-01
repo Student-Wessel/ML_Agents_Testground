@@ -47,12 +47,13 @@ namespace RaceAgentScripts
         
         private void OnCorrectCheckPoint(CheckPoint pCheckPoint)
         {
-            AddReward(1f / checkPointActor.checkPointCount);
+            //AddReward(1f / checkPointActor.NormalizedTime());
+            AddReward((1f / checkPointActor.checkPointCount)*5);
         }
         
         private void OnWrongCheckPoint(CheckPoint pCheckPoint)
         {
-            
+            EndEpisode();
         }
         
         private void OnCheckPointFailed(CheckPoint pCheckPoint)
@@ -63,7 +64,8 @@ namespace RaceAgentScripts
         private void OnFinishReached(CheckPoint pCheckPoint)
         {
             finishCount++;
-            AddReward(1f / checkPointActor.checkPointCount);
+            //AddReward(1f / checkPointActor.NormalizedTime());
+            AddReward((1f / checkPointActor.checkPointCount)*5);
 
             // if (finishCount > 1)
             // {
@@ -140,10 +142,10 @@ namespace RaceAgentScripts
             
             carController.SetCarInput(carInput);
             
-            if (isInPunishZone)
-            {
-                AddReward(-0.01f);
-            }
+            // if (isInPunishZone)
+            // {
+            //     AddReward(-0.01f);
+            // }
         }
 
         private void OnTriggerEnter(Collider other)

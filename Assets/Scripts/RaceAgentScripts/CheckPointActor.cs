@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using CustomPropertyDrawers;
 using UnityEngine;
+using Utils;
 
 namespace RaceAgentScripts
 {
@@ -50,6 +51,12 @@ namespace RaceAgentScripts
             }
         }
 
+        // Value between 1-0 depending on how long the current time between checkpoints is
+        public float NormalizedTime()
+        {
+            return MathExtension.Map(timeBetweenCheckpoints,0f,maxTimeBetweenCheckpoints,0f,1f);
+        }
+        
         public void ResetTime()
         {
             timeBetweenCheckpoints = maxTimeBetweenCheckpoints;

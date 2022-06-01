@@ -1,0 +1,56 @@
+{
+    "RaceAgent": {
+        "checkpoints": [
+            {
+                "steps": 499957,
+                "file_path": "results\\RaceAgentV6\\RaceAgent\\RaceAgent-499957.onnx",
+                "reward": 0.06428571600083481,
+                "creation_time": 1654078415.8257275,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV6\\RaceAgent\\RaceAgent-499957.pt"
+                ]
+            },
+            {
+                "steps": 999938,
+                "file_path": "results\\RaceAgentV6\\RaceAgent\\RaceAgent-999938.onnx",
+                "reward": 0.0678571463148627,
+                "creation_time": 1654078910.7751877,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV6\\RaceAgent\\RaceAgent-999938.pt"
+                ]
+            },
+            {
+                "steps": 1499942,
+                "file_path": "results\\RaceAgentV6\\RaceAgent\\RaceAgent-1499942.onnx",
+                "reward": 0.06810345191604875,
+                "creation_time": 1654079401.6166303,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV6\\RaceAgent\\RaceAgent-1499942.pt"
+                ]
+            },
+            {
+                "steps": 1701159,
+                "file_path": "results\\RaceAgentV6\\RaceAgent\\RaceAgent-1701159.onnx",
+                "reward": 0.06958525708966679,
+                "creation_time": 1654079605.935713,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV6\\RaceAgent\\RaceAgent-1701159.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1701159,
+            "file_path": "results\\RaceAgentV6\\RaceAgent.onnx",
+            "reward": 0.06958525708966679,
+            "creation_time": 1654079605.935713,
+            "auxillary_file_paths": [
+                "results\\RaceAgentV6\\RaceAgent\\RaceAgent-1701159.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

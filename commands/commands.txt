@@ -8,6 +8,9 @@ mlagents-learn config/MoveAgent.yaml --run-id=MoveAgentV4
 mlagents-learn config/BallUphold.yaml --run-id=BallUphold
 
 mlagents-learn config/RaceAgent.yaml --run-id=RaceAgent
+mlagents-learn config/RaceAgent.yaml --run-id=RaceAgentV6
+
+mlagents-learn config/RaceAgentV2.yaml --run-id=RaceAgentV7
 
 mlagents-learn config/RayAgent.yaml --run-id=RayAgent
 

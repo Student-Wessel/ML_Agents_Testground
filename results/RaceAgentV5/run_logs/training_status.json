@@ -2,40 +2,58 @@
     "RaceAgent": {
         "checkpoints": [
             {
-                "steps": 499980,
-                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-499980.onnx",
-                "reward": 0.01670588441193104,
-                "creation_time": 1654019350.9385612,
+                "steps": 1302726,
+                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1302726.onnx",
+                "reward": 0.4708333402872086,
+                "creation_time": 1654032278.9154632,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-499980.pt"
+                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1302726.pt"
                 ]
             },
             {
-                "steps": 999965,
-                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-999965.onnx",
-                "reward": 0.10294117728391519,
-                "creation_time": 1654019883.384063,
+                "steps": 1499981,
+                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1499981.onnx",
+                "reward": 0.4583333450136706,
+                "creation_time": 1654032499.7384636,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-999965.pt"
+                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1499981.pt"
                 ]
             },
             {
-                "steps": 1468216,
-                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1468216.onnx",
-                "reward": 0.1168300673727774,
-                "creation_time": 1654020350.7047114,
+                "steps": 1672740,
+                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1672740.onnx",
+                "reward": null,
+                "creation_time": 1654032669.8066154,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1468216.pt"
+                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1672740.pt"
+                ]
+            },
+            {
+                "steps": 1999950,
+                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1999950.onnx",
+                "reward": 0.5054563623187798,
+                "creation_time": 1654032952.8565917,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1999950.pt"
+                ]
+            },
+            {
+                "steps": 2204623,
+                "file_path": "results\\RaceAgentV5\\RaceAgent\\RaceAgent-2204623.onnx",
+                "reward": 0.5041666746139526,
+                "creation_time": 1654033199.7916083,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV5\\RaceAgent\\RaceAgent-2204623.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1468216,
+            "steps": 2204623,
             "file_path": "results\\RaceAgentV5\\RaceAgent.onnx",
-            "reward": 0.1168300673727774,
-            "creation_time": 1654020350.7047114,
+            "reward": 0.5041666746139526,
+            "creation_time": 1654033199.7916083,
             "auxillary_file_paths": [
-                "results\\RaceAgentV5\\RaceAgent\\RaceAgent-1468216.pt"
+                "results\\RaceAgentV5\\RaceAgent\\RaceAgent-2204623.pt"
             ]
         }
     },

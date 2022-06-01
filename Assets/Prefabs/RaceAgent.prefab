@@ -523,7 +523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkPointTag: CheckPoint
   hasTimeLimit: 1
-  maxTimeBetweenCheckpoints: 4
+  maxTimeBetweenCheckpoints: 2
   checkPoints: {fileID: 0}
 --- !u!114 &8106609742092254606
 MonoBehaviour:

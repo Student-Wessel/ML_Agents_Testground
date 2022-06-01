@@ -2,24 +2,6 @@
     "RaceAgent": {
         "checkpoints": [
             {
-                "steps": 211536,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-211536.onnx",
-                "reward": 0.1593302778251793,
-                "creation_time": 1654087897.0523875,
-                "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-211536.pt"
-                ]
-            },
-            {
-                "steps": 499897,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-499897.onnx",
-                "reward": 0.462880823140343,
-                "creation_time": 1654088230.2310946,
-                "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-499897.pt"
-                ]
-            },
-            {
                 "steps": 999900,
                 "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-999900.onnx",
                 "reward": 1.024844755977392,
@@ -45,15 +27,33 @@
                 "auxillary_file_paths": [
                     "results\\RaceAgentV7\\RaceAgent\\RaceAgent-1735095.pt"
                 ]
+            },
+            {
+                "steps": 1999953,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-1999953.onnx",
+                "reward": 3.142857264727354,
+                "creation_time": 1654089875.215949,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-1999953.pt"
+                ]
+            },
+            {
+                "steps": 2429095,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-2429095.onnx",
+                "reward": 2.6397516168653965,
+                "creation_time": 1654090327.1795497,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-2429095.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 1735095,
+            "steps": 2429095,
             "file_path": "results\\RaceAgentV7\\RaceAgent.onnx",
-            "reward": 5.753105807118118,
-            "creation_time": 1654089517.7658498,
+            "reward": 2.6397516168653965,
+            "creation_time": 1654090327.1795497,
             "auxillary_file_paths": [
-                "results\\RaceAgentV7\\RaceAgent\\RaceAgent-1735095.pt"
+                "results\\RaceAgentV7\\RaceAgent\\RaceAgent-2429095.pt"
             ]
         }
     },

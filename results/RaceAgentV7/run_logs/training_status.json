@@ -2,58 +2,58 @@
     "RaceAgent": {
         "checkpoints": [
             {
-                "steps": 6499936,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-6499936.onnx",
-                "reward": 65.10911384224892,
-                "creation_time": 1654094811.041376,
+                "steps": 8999911,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-8999911.onnx",
+                "reward": 64.49867019057274,
+                "creation_time": 1654097902.4121652,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-6499936.pt"
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-8999911.pt"
                 ]
             },
             {
-                "steps": 6999876,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-6999876.onnx",
-                "reward": 65.04118572175503,
-                "creation_time": 1654095298.6349056,
+                "steps": 9499992,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-9499992.onnx",
+                "reward": 14.576728105545044,
+                "creation_time": 1654098321.379931,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-6999876.pt"
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-9499992.pt"
                 ]
             },
             {
-                "steps": 7499985,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-7499985.onnx",
-                "reward": 65.96034675836563,
-                "creation_time": 1654095821.7904081,
+                "steps": 9999888,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-9999888.onnx",
+                "reward": 52.36546913534403,
+                "creation_time": 1654098738.7460237,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-7499985.pt"
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-9999888.pt"
                 ]
             },
             {
-                "steps": 7999983,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-7999983.onnx",
-                "reward": 66.67314207553864,
-                "creation_time": 1654096678.5705101,
+                "steps": 10499947,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-10499947.onnx",
+                "reward": 64.01722428202629,
+                "creation_time": 1654099158.055206,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-7999983.pt"
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-10499947.pt"
                 ]
             },
             {
-                "steps": 8493432,
-                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-8493432.onnx",
-                "reward": 65.23580375313759,
-                "creation_time": 1654097434.820911,
+                "steps": 10900089,
+                "file_path": "results\\RaceAgentV7\\RaceAgent\\RaceAgent-10900089.onnx",
+                "reward": 64.18468325336774,
+                "creation_time": 1654099491.1364405,
                 "auxillary_file_paths": [
-                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-8493432.pt"
+                    "results\\RaceAgentV7\\RaceAgent\\RaceAgent-10900089.pt"
                 ]
             }
         ],
         "final_checkpoint": {
-            "steps": 8493432,
+            "steps": 10900089,
             "file_path": "results\\RaceAgentV7\\RaceAgent.onnx",
-            "reward": 65.23580375313759,
-            "creation_time": 1654097434.820911,
+            "reward": 64.18468325336774,
+            "creation_time": 1654099491.1364405,
             "auxillary_file_paths": [
-                "results\\RaceAgentV7\\RaceAgent\\RaceAgent-8493432.pt"
+                "results\\RaceAgentV7\\RaceAgent\\RaceAgent-10900089.pt"
             ]
         }
     },

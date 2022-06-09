@@ -10,7 +10,7 @@ namespace Utils
             checkCollisionEnter= false ,checkCollisionStay = false,checkCollisionExit = false;
 
         public event Action<Collider> TriggerEntered, TriggerStayed, TriggerExited;
-        public event Action<Collision> CollisionEnter, CollisionStayed, CollisionExited; 
+        public event Action<Collision> CollisionEnter, CollisionStayed, CollisionExited;
 
         private void OnTriggerEnter(Collider other)
         {

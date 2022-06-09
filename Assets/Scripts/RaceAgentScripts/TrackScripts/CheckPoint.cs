@@ -5,6 +5,7 @@ using Utils;
 
 namespace RaceAgentScripts.TrackScripts
 {
+    [ExecuteInEditMode]
     public class CheckPoint : MonoBehaviour
     {
         // The object that has the forward transform of the absolute direction
@@ -19,6 +20,11 @@ namespace RaceAgentScripts.TrackScripts
         {
             //trigger.TriggerEntered += OnTriggerEntered; 
         }
+
+        // private void Update()
+        // {
+        //     GetComponentInChildren<Collider>().tag = "CheckPoint";
+        // }
 
         // private void OnTriggerEntered(Collider other)
         // {

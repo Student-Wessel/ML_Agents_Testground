@@ -1,0 +1,38 @@
+{
+    "RaceAgent": {
+        "checkpoints": [
+            {
+                "steps": 499978,
+                "file_path": "results\\RaceAgentNoPowerSlide\\RaceAgent\\RaceAgent-499978.onnx",
+                "reward": 0.6091617965384534,
+                "creation_time": 1654182659.3733158,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentNoPowerSlide\\RaceAgent\\RaceAgent-499978.pt"
+                ]
+            },
+            {
+                "steps": 612000,
+                "file_path": "results\\RaceAgentNoPowerSlide\\RaceAgent\\RaceAgent-612000.onnx",
+                "reward": 0.435038215170304,
+                "creation_time": 1654182814.3530083,
+                "auxillary_file_paths": [
+                    "results\\RaceAgentNoPowerSlide\\RaceAgent\\RaceAgent-612000.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 612000,
+            "file_path": "results\\RaceAgentNoPowerSlide\\RaceAgent.onnx",
+            "reward": 0.435038215170304,
+            "creation_time": 1654182814.3530083,
+            "auxillary_file_paths": [
+                "results\\RaceAgentNoPowerSlide\\RaceAgent\\RaceAgent-612000.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

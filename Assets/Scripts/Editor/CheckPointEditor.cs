@@ -1,5 +1,6 @@
 using System;
 using RaceAgentScripts;
+using RaceAgentScripts.TrackScripts;
 using UnityEditor;
 using UnityEngine;
 
@@ -18,15 +19,6 @@ namespace Editor
 
         public override void OnInspectorGUI()
         {
-            if (GUILayout.Button("Flip Direction"))
-            {
-                foreach (var targetObj in targets)
-                {
-                    CheckPoint targetCheckPoint = (CheckPoint) targetObj;
-                    targetCheckPoint.FlipAbsoluteDirectionDirection();
-                }
-            }
-            
             base.OnInspectorGUI();
         }
     }

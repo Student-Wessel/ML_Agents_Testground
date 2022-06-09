@@ -506,7 +506,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 15000
+  MaxStep: 10000
   isInPunishZone: 0
   ContinuousActionsScale: 1
 --- !u!114 &570256650198452643
@@ -523,8 +523,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkPointTag: CheckPoint
   hasTimeLimit: 1
-  maxTimeBetweenCheckpoints: 0.55
-  checkPoints: {fileID: 0}
+  maxTimeBetweenCheckpoints: 0.7
+  trackManager: {fileID: 0}
 --- !u!114 &8106609742092254606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,22 +540,23 @@ MonoBehaviour:
   AcceleratingVariables:
     mass: 1
     drag: 0.75
-    turnStrength: 100
+    turnStrength: 14
   DecelerationVariables:
     mass: 1
     drag: 1
-    turnStrength: 100
+    turnStrength: 14
   NeutralVeriables:
     mass: 1
     drag: 0.2
-    turnStrength: 100
+    turnStrength: 14
   BreakingVeriables:
     mass: 1
     drag: 1.5
     turnStrength: 150
-  forwardAccel: 2.2
+  forwardAccel: 3.5
   reverseAccel: 1
   maxSpeed: 100
+  maxTurnAngle: 130
   rotationSlip: 0.1
   rb: {fileID: 8106609742102355699}
   frontLeftWheel: {fileID: 567085915084134429}
@@ -573,12 +574,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 9
+    VectorObservationSize: 10
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 2
-      BranchSizes: 02000000
-    VectorActionSize: 
+      m_NumContinuousActions: 0
+      BranchSizes: 0300000003000000
+    VectorActionSize: 0300000003000000
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1

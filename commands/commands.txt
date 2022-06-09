@@ -11,6 +11,10 @@ mlagents-learn config/RaceAgent.yaml --run-id=RaceAgent
 mlagents-learn config/RaceAgent.yaml --run-id=RaceAgentV6
 
 mlagents-learn config/RaceAgentV2.yaml --run-id=RaceAgentV7
+mlagents-learn config/RaceAgentV2.yaml --run-id=RaceAgentNoPowerSlide
+mlagents-learn config/RaceAgentVDemon.yaml --run-id=RaceAgentDemo
+
+mlagents-learn config/RaceAgentV3.yaml --run-id=RaceAgentV8
 
 mlagents-learn config/RayAgent.yaml --run-id=RayAgent
 

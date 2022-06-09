@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using CustomAgent;
+using RaceAgentScripts.TrackScripts;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
@@ -47,13 +48,13 @@ namespace RaceAgentScripts
         
         private void OnCorrectCheckPoint(CheckPoint pCheckPoint)
         {
-            AddReward((checkPointActor.NormalizedTime()/checkPointActor.checkPointCount)*5f);
             AddReward((1f / checkPointActor.checkPointCount)*5f);
         }
         
         private void OnWrongCheckPoint(CheckPoint pCheckPoint)
         {
-            EndEpisode();
+            // Debug.Log("Wrong checkpoint");
+            // EndEpisode();
         }
         
         private void OnCheckPointFailed(CheckPoint pCheckPoint)
@@ -64,13 +65,7 @@ namespace RaceAgentScripts
         private void OnFinishReached(CheckPoint pCheckPoint)
         {
             finishCount++;
-            AddReward((checkPointActor.NormalizedTime()/checkPointActor.checkPointCount)*5f);
-            AddReward((1f / checkPointActor.checkPointCount)*5);
-
-            // if (finishCount > 1)
-            // {
-            //     EndEpisode();
-            // }
+            AddReward((1f / checkPointActor.checkPointCount)*5f);
         }
 
         private void Start()
@@ -89,62 +84,55 @@ namespace RaceAgentScripts
         
         public override void CollectObservations(VectorSensor sensor)
         {
-            sensor.AddObservation(checkPointActor.CurrentTarget.transform.forward); // 3
             sensor.AddObservation(transform.forward); // 3
             sensor.AddObservation(carController.GetVelocity()); // 3
+            sensor.AddObservation(carController.GetTurnAngle()); // 1
+            sensor.AddObservation(checkPointActor.CurrentTarget.AverageDirection); // 3
         }
         
         public override void Heuristic(in ActionBuffers actionsOut)
         {
             if (Input.GetKey(KeyCode.W))
             {
-                actionsOut.ContinuousActions.Array[0] = ContinuousActionsScale;
+                actionsOut.DiscreteActions.Array[0] = 2;
             }
             else if (Input.GetKey(KeyCode.S))
             {
-                actionsOut.ContinuousActions.Array[0] = -ContinuousActionsScale;
+                actionsOut.DiscreteActions.Array[0] = 0;
             }
             else
             {
-                actionsOut.ContinuousActions.Array[0] = 0;
+                actionsOut.DiscreteActions.Array[0] = 1;
             }
 
             if (Input.GetKey(KeyCode.A))
             {
-                actionsOut.ContinuousActions.Array[1] = -ContinuousActionsScale;
+                actionsOut.DiscreteActions.Array[1] = 0;
             }
             else if (Input.GetKey(KeyCode.D))
             {
-                actionsOut.ContinuousActions.Array[1] = ContinuousActionsScale;
+                actionsOut.DiscreteActions.Array[1] = 2;
             }
             else
             {
-                actionsOut.ContinuousActions.Array[1] = 0;
-            }
-
-            actionsOut.DiscreteActions.Array[0] = 0;
-            if (Input.GetKey(KeyCode.Space))
-            {
-                actionsOut.DiscreteActions.Array[0] = 1;
+                actionsOut.DiscreteActions.Array[1] = 1;
             }
         }
         
         public override void OnActionReceived(ActionBuffers actions)
         {
-            var forwardValue = actions.ContinuousActions[0];
-            var sidewaysValue = actions.ContinuousActions[1];
-            var breakValue = actions.DiscreteActions[0];
+            var forwardValue = actions.DiscreteActions[0]-1;
+            var sidewaysValue = actions.DiscreteActions[1]-1;
 
             CarInput carInput = new CarInput();
             carInput.forward = forwardValue;
             carInput.sideways = sidewaysValue;
-            carInput.breaking = breakValue == 1;
             
             carController.SetCarInput(carInput);
-            
+
             if (isInPunishZone)
             {
-                AddReward(-0.01f);
+                AddReward(-0.001f);
             }
         }
 

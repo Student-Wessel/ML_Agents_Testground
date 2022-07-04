@@ -53,12 +53,13 @@ namespace RaceAgentScripts
         
         private void OnWrongCheckPoint(CheckPoint pCheckPoint)
         {
-            // Debug.Log("Wrong checkpoint");
-            // EndEpisode();
+
         }
         
         private void OnCheckPointFailed(CheckPoint pCheckPoint)
         {
+            int stepsLeft = MaxStep - StepCount;
+            AddReward((-(1f/MaxStep)*stepsLeft));
             EndEpisode();
         }
 
@@ -130,10 +131,10 @@ namespace RaceAgentScripts
             
             carController.SetCarInput(carInput);
 
-            if (isInPunishZone)
-            {
-                AddReward(-0.001f);
-            }
+            // if (isInPunishZone)
+            // {
+            //     AddReward(-0.001f);
+            // }
         }
 
         private void OnTriggerEnter(Collider other)

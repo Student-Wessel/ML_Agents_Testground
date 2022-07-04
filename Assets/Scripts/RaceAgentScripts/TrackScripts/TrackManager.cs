@@ -104,6 +104,31 @@ namespace RaceAgentScripts.TrackScripts
                 checkPoint.HideCollider();
             }
         }
+
+        public void ShowPunishZones()
+        {
+            RecursiveSetPunishZoneVisual(true, trackPiecesParent.transform);
+        }
+
+        public void HidePunishZones()
+        {
+            RecursiveSetPunishZoneVisual(false, trackPiecesParent.transform);
+        }
+
+        private void RecursiveSetPunishZoneVisual(bool show,Transform pTransform)
+        {
+            if (pTransform.CompareTag("PunishZone"))
+            {
+                var renderer = pTransform.GetComponent<MeshRenderer>();
+                if (renderer != null)
+                    renderer.enabled = show;
+            }
+            
+            foreach (Transform child in pTransform)
+            {
+                RecursiveSetPunishZoneVisual(show,child);
+            }
+        }
         
     }
 }

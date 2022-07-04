@@ -1,0 +1,65 @@
+{
+    "AimAgent": {
+        "checkpoints": [
+            {
+                "steps": 18499997,
+                "file_path": "results\\AimAgentV3\\AimAgent\\AimAgent-18499997.onnx",
+                "reward": 0.8821794929412695,
+                "creation_time": 1655829178.7327092,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV3\\AimAgent\\AimAgent-18499997.pt"
+                ]
+            },
+            {
+                "steps": 18999993,
+                "file_path": "results\\AimAgentV3\\AimAgent\\AimAgent-18999993.onnx",
+                "reward": 0.871620375249121,
+                "creation_time": 1655829434.1176374,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV3\\AimAgent\\AimAgent-18999993.pt"
+                ]
+            },
+            {
+                "steps": 19499977,
+                "file_path": "results\\AimAgentV3\\AimAgent\\AimAgent-19499977.onnx",
+                "reward": 0.8788988142540413,
+                "creation_time": 1655829688.4716785,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV3\\AimAgent\\AimAgent-19499977.pt"
+                ]
+            },
+            {
+                "steps": 19999990,
+                "file_path": "results\\AimAgentV3\\AimAgent\\AimAgent-19999990.onnx",
+                "reward": 0.8845116839667034,
+                "creation_time": 1655829944.7323341,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV3\\AimAgent\\AimAgent-19999990.pt"
+                ]
+            },
+            {
+                "steps": 20000029,
+                "file_path": "results\\AimAgentV3\\AimAgent\\AimAgent-20000029.onnx",
+                "reward": 0.8851886858355325,
+                "creation_time": 1655829944.776334,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV3\\AimAgent\\AimAgent-20000029.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 20000029,
+            "file_path": "results\\AimAgentV3\\AimAgent.onnx",
+            "reward": 0.8851886858355325,
+            "creation_time": 1655829944.776334,
+            "auxillary_file_paths": [
+                "results\\AimAgentV3\\AimAgent\\AimAgent-20000029.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

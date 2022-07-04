@@ -50,6 +50,16 @@ namespace Editor
                 trackManager.HideCheckPointColliders();
             }
             
+            if (GUILayout.Button("Show punish visual"))
+            {
+                trackManager.ShowPunishZones();
+            }
+            
+            if (GUILayout.Button("Hide punish visual"))
+            {
+                trackManager.HidePunishZones();
+            }
+            
             GUILayout.Space(15);
             
             base.OnInspectorGUI();

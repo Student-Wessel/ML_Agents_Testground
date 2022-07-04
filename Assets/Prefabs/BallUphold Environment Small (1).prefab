@@ -1913,8 +1913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 2945517840951127526}
-  minHeadbuttForce: 8
-  maxHeadbuttForce: 8
+  minHeadbuttForce: 7
+  maxHeadbuttForce: 7
   rewardCooldown: 0.5
   groundTag: Ground
   agentHeadTag: Agent

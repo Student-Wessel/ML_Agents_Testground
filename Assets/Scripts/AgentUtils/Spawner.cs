@@ -9,8 +9,8 @@ namespace AgentUtils
     public class Spawner : MonoBehaviour
     {
         [SerializeField] private List<SpawnZone> spawnZones;
-        [SerializeField] private GameObject spawnObject;
-        private ISpawnable spawnable; 
+        [SerializeField] private List<GameObject> spawnObjects;
+        private List<ISpawnable> spawnables; 
 
         private void OnValidate()
         {
@@ -19,54 +19,63 @@ namespace AgentUtils
         private void Awake()
         {
             RemoveNullZones();
-            spawnable = spawnObject.GetComponent<ISpawnable>();
             
-            if (spawnable == null)
+            spawnables = new List<ISpawnable>();
+
+            for (int i = 0; i < spawnObjects.Count; i++)
             {
-                Debug.LogError("Game object is not an ISpawnable");
-                return;
+                var spawnable = spawnObjects[i].GetComponent<ISpawnable>();
+                
+                if (spawnable == null)
+                {
+                    Debug.LogError("Game object is not an ISpawnable");
+                    spawnObjects.RemoveAt(i);
+                    i--;
+                }
+                spawnables.Add(spawnable);
             }
         }
 
         public void SpawnToRandomPosition()
         {
-            spawnable = spawnObject.GetComponent<ISpawnable>();
-
-            if (spawnable == null)
+            for (int i = 0; i < spawnables.Count; i++)
             {
-                Debug.LogError("Game object is not an ISpawnable");
-                return;
+                var spawnable = spawnables[i];
+                int randomIndex = Random.Range(0, spawnZones.Count);
+                if (spawnZones.Count == 1)
+                    randomIndex = 0;
+                Vector3 randomPositionInBounds = spawnZones[randomIndex].RandomPositionInBounds();
+                spawnable.SpawnPosition(randomPositionInBounds);
             }
-
-            SetToRandomPosition();
         }
         
         public void SpawnToRandomPositionAndRotation()
         {
-            var spawnable = spawnObject.GetComponent<ISpawnable>();
-
-            if (spawnable == null)
+            for (int i = 0; i < spawnables.Count; i++)
             {
-                Debug.LogError("Game object is not an ISpawnable");
-                return;
+                var spawnable = spawnables[i];
+                int randomIndex = Random.Range(0, spawnZones.Count);
+                if (spawnZones.Count == 1)
+                    randomIndex = 0;
+                Vector3 randomPositionInBounds = spawnZones[randomIndex].RandomPositionInBounds();
+
+                var randomRotation = Quaternion.Euler(0, Random.Range(0, 360), 0);
+                spawnable.SpawnPositionRotation(randomPositionInBounds,randomRotation);
             }
-            
-            SetToRandomPosition();
-            spawnObject.transform.eulerAngles = new Vector3(0, Random.Range(0, 360), 0);
         }
-        
+
         public void SpawnToRandomPositionSetRotation(Quaternion pRotation)
         {
-            var spawnable = spawnObject.GetComponent<ISpawnable>();
-
-            if (spawnable == null)
+            for (int i = 0; i < spawnables.Count; i++)
             {
-                Debug.LogError("Game object is not an ISpawnable");
-                return;
+                var spawnable = spawnables[i];
+                int randomIndex = Random.Range(0, spawnZones.Count);
+                if (spawnZones.Count == 1)
+                    randomIndex = 0;
+                Vector3 randomPositionInBounds = spawnZones[randomIndex].RandomPositionInBounds();
+
+                spawnable.SpawnPositionRotation(randomPositionInBounds,pRotation);
             }
-            
-            SetToRandomPosition();
-            spawnObject.transform.rotation = pRotation;
         }
         public void AddSpawnZone(SpawnZone pSpawnZone)
         {
@@ -83,14 +92,6 @@ namespace AgentUtils
                     i--;
                 }
             }
-        }
-
-        private void SetToRandomPosition()
-        {
-            int randomIndex = Random.Range(0, spawnZones.Count);
-            Vector3 randomPositionInBounds = spawnZones[randomIndex].RandomPositionInBounds();
-            randomPositionInBounds.y = spawnObject.transform.position.y;
-            spawnable.Spawn(randomPositionInBounds);
         }
     }
 }

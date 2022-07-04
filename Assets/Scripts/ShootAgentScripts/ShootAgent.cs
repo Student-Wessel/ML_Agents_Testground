@@ -9,7 +9,7 @@ using UnityEngine;
 namespace ShootAgentScripts
 {
     [RequireComponent(typeof(CharacterController))]
-    public class ShootAgent : EnvironmentAgent , ISpawnable
+    public class ShootAgent : EnvironmentAgent
     {
         [SerializeField] private GameObject goal;
         

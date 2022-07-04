@@ -1,0 +1,29 @@
+{
+    "AimAgent": {
+        "checkpoints": [
+            {
+                "steps": 429110,
+                "file_path": "results\\AimAgentV2\\AimAgent\\AimAgent-429110.onnx",
+                "reward": 0.9796470552682877,
+                "creation_time": 1655815804.272499,
+                "auxillary_file_paths": [
+                    "results\\AimAgentV2\\AimAgent\\AimAgent-429110.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 429110,
+            "file_path": "results\\AimAgentV2\\AimAgent.onnx",
+            "reward": 0.9796470552682877,
+            "creation_time": 1655815804.272499,
+            "auxillary_file_paths": [
+                "results\\AimAgentV2\\AimAgent\\AimAgent-429110.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

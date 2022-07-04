@@ -7,11 +7,11 @@ TagManager:
   - DangerCube
   - Goal
   - Agent
-  - target
   - Ground
-  - ground
   - PunishZone
   - CheckPoint
+  - Gun
+  - Environment
   layers:
   - Default
   - TransparentFX
@@ -29,7 +29,7 @@ TagManager:
   - AgentTriggerCollider
   - RaceCarAgent
   - PunishZone
-  - 
+  - Objective
   - 
   - 
   - 

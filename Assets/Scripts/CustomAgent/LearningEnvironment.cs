@@ -7,13 +7,15 @@ namespace CustomAgent
 {
      public abstract class LearningEnvironment : MonoBehaviour
      {
+          protected List<EnvironmentAgent> agents;
+          
           public virtual void Awake()
           {
                AttachAllAgents();
           }
           private void AttachAllAgents()
           {
-               var agents = GetComponentsInChildren<EnvironmentAgent>().ToList();
+               agents = GetComponentsInChildren<EnvironmentAgent>().ToList();
                foreach (var agent in agents)
                {
                     agent.AttachToEnvironment(this);

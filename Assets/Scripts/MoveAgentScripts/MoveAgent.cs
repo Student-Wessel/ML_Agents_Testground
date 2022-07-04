@@ -128,13 +128,6 @@ namespace MoveAgentScripts
 
         #endregion
 
-        public void Spawn(Vector3 pPosition)
-        {
-            ch.enabled = false;
-            transform.position = pPosition;
-            ch.enabled = true;
-        }
-
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject == goal)
@@ -143,6 +136,23 @@ namespace MoveAgentScripts
                 lastResults.reward = 1f;
                 EndEpisode();
             }
+        }
+
+        public void SpawnPosition(Vector3 pPosition)
+        {
+            ch.enabled = false;
+            transform.position = pPosition;
+            ch.enabled = true;
+        }
+
+        public void SpawnRotation(Quaternion pRotation)
+        {
+            
+        }
+
+        public void SpawnPositionRotation(Vector3 pPosition, Quaternion pRotation)
+        {
+            
         }
     }
 }

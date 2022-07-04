@@ -47,12 +47,34 @@ namespace RaceAgentScripts.TrackScripts
         }
         public void ShowCollider()
         {
-            GetComponent<MeshRenderer>().enabled = true;
+            var renderer = GetComponent<MeshRenderer>();
+            
+            if (renderer != null)
+                renderer.enabled = true;
+
+            foreach (Transform child in transform)
+            {
+                var childRenderer =child.GetComponent<MeshRenderer>();
+
+                if (childRenderer != null)
+                    childRenderer.enabled = true;
+            }
         }
 
         public void HideCollider()
         {
-            GetComponent<MeshRenderer>().enabled = false;
+            var renderer = GetComponent<MeshRenderer>();
+            
+            if (renderer != null)
+                renderer.enabled = false;
+
+            foreach (Transform child in transform)
+            {
+                var childRenderer =child.GetComponent<MeshRenderer>();
+
+                if (childRenderer != null)
+                    childRenderer.enabled = false;
+            }
         }
 
         public void ShowAverageDirection()

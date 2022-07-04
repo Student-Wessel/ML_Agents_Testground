@@ -16,6 +16,12 @@ mlagents-learn config/RaceAgentVDemon.yaml --run-id=RaceAgentDemo
 
 mlagents-learn config/RaceAgentV3.yaml --run-id=RaceAgentV8
 
+mlagents-learn config/ShootOutAgent.yaml --run-id=ShootOutAgentV1
+
+mlagents-learn config/AimAgent.yaml --run-id=AimAgentV1
+mlagents-learn config/AimAgent.yaml --run-id=AimAgentV2
+
+
 mlagents-learn config/RayAgent.yaml --run-id=RayAgent
 
 

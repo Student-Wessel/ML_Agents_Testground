@@ -1,0 +1,65 @@
+{
+    "ShootOut": {
+        "checkpoints": [
+            {
+                "steps": 499884,
+                "file_path": "results\\ShootOutAgentV1\\ShootOut\\ShootOut-499884.onnx",
+                "reward": -0.199333385626475,
+                "creation_time": 1655467261.7412062,
+                "auxillary_file_paths": [
+                    "results\\ShootOutAgentV1\\ShootOut\\ShootOut-499884.pt"
+                ]
+            },
+            {
+                "steps": 999896,
+                "file_path": "results\\ShootOutAgentV1\\ShootOut\\ShootOut-999896.onnx",
+                "reward": -0.33244449098904927,
+                "creation_time": 1655467773.3080666,
+                "auxillary_file_paths": [
+                    "results\\ShootOutAgentV1\\ShootOut\\ShootOut-999896.pt"
+                ]
+            },
+            {
+                "steps": 1499893,
+                "file_path": "results\\ShootOutAgentV1\\ShootOut\\ShootOut-1499893.onnx",
+                "reward": -0.5328889350096385,
+                "creation_time": 1655468318.682492,
+                "auxillary_file_paths": [
+                    "results\\ShootOutAgentV1\\ShootOut\\ShootOut-1499893.pt"
+                ]
+            },
+            {
+                "steps": 1999993,
+                "file_path": "results\\ShootOutAgentV1\\ShootOut\\ShootOut-1999993.onnx",
+                "reward": -0.578771992733604,
+                "creation_time": 1655468821.185194,
+                "auxillary_file_paths": [
+                    "results\\ShootOutAgentV1\\ShootOut\\ShootOut-1999993.pt"
+                ]
+            },
+            {
+                "steps": 2497155,
+                "file_path": "results\\ShootOutAgentV1\\ShootOut\\ShootOut-2497155.onnx",
+                "reward": null,
+                "creation_time": 1655469280.088324,
+                "auxillary_file_paths": [
+                    "results\\ShootOutAgentV1\\ShootOut\\ShootOut-2497155.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2497155,
+            "file_path": "results\\ShootOutAgentV1\\ShootOut.onnx",
+            "reward": null,
+            "creation_time": 1655469280.088324,
+            "auxillary_file_paths": [
+                "results\\ShootOutAgentV1\\ShootOut\\ShootOut-2497155.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

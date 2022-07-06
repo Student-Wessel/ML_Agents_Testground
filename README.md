@@ -1,2 +1,2 @@
-# VR_Unity_Testingground
-Testing ground for VR stuff
+# ML_Agents_Testground
+Testing ground for ML agents
